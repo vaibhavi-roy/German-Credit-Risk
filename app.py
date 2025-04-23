@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 import joblib
 
 # Load trained model and scaler
@@ -17,7 +18,8 @@ duration = st.number_input("Duration (in months)", min_value=1, value=12)
 
 # Prediction
 if st.button("Predict Credit Risk"):
-    input_data = np.array([[age, job, credit_amount, duration]])
+    input_data = pd.DataFrame([[age, job, credit_amount, duration]],
+                              columns=["Age", "Job", "Credit amount", "Duration"])
     input_scaled = scaler.transform(input_data)
     prediction = rf_model.predict(input_scaled)[0]
     prob = rf_model.predict_proba(input_scaled)[0][1]
