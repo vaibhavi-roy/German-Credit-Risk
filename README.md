@@ -2,6 +2,11 @@
 
 This project centers on predicting credit risk using machine learning techniques. The main goal is to determine whether a loan applicant is likely to default, based on their profile. The workflow includes data analysis, preprocessing, feature engineering, model building, and evaluation.
 
+## Demo App
+
+![Good-Risk](https://github.com/vaibhavi-roy/German-Credit-Risk/blob/main/Good-risk.png)
+![Bad-Risk](https://github.com/vaibhavi-roy/German-Credit-Risk/blob/main/Bad-risk.png)
+
 ## Libraries and DataSet
 
 The following Python libraries are used in this project:
